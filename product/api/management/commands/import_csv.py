@@ -16,6 +16,7 @@ class Command(BaseCommand):
             for row in reader:
                 try:
                     if float(row['price']) < 0 or int(row['stock']) < 0:
+
                         continue  # Validation: Skip invalid rows
                     products.append(Product(
                         id=row['id'],

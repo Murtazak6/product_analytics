@@ -4,7 +4,7 @@ from django.db import models
 class Product(models.Model):
     id=models.BigAutoField(primary_key=True)
     name=models.CharField(max_length=255)
-    category=models.CharField(max_length=255)
-    price=models.DecimalField(max_digits=10, decimal_places=3)
+    category=models.CharField(max_length=255, db_index=True)
+    price=models.FloatField(db_index=True)
     stock=models.BigIntegerField()
-    created_at=models.DateTimeField()
+    created_at=models.DateTimeField(db_index=True)
