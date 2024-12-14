@@ -37,4 +37,4 @@ python manage.py import_csv path/to/large_dataset.csv
 ```
 
 ## Connection to redis cache
-In **settings.py** file update the redis connection **Location** with **redis connection info**
+In `settings.py` file update the redis connection ***LOCATION*** with ***redis connection info***
